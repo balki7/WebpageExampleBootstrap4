@@ -29,7 +29,8 @@
                 <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>
                     About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+                </li>
             </ul>
             <span class="navbar-text">
                 <a data-toggle="modal" data-target="#loginModal">
@@ -52,11 +53,13 @@
                     <div class="form-row">
                         <div class="form-group col-sm-4">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                   placeholder="Enter email">
                         </div>
                         <div class="form-group col-sm-4">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                   placeholder="Password">
                         </div>
                         <div class="col-sm-auto">
                             <div class="form-check">
@@ -67,8 +70,111 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel
+                        </button>
                         <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reserveTableModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Reserve a Table<h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="reserveForm">
+                    <div class="form-group row">
+                        <label for="numberOfGuests" class="col-12 col-sm-3 col-form-label">Number of Guests</label>
+                        <div class="col-2 col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="1" id="defaultCheck1"
+                                       name="numberOfGuests">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    1
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="2" id="defaultCheck2"
+                                       name="numberOfGuests">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    2
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="3" id="defaultCheck3"
+                                       name="numberOfGuests" checked>
+                                <label class="form-check-label" for="defaultCheck3">
+                                    3
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="4" id="defaultCheck4"
+                                       name="numberOfGuests">
+                                <label class="form-check-label" for="defaultCheck4">
+                                    4
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="5" id="defaultCheck5"
+                                       name="numberOfGuests">
+                                <label class="form-check-label" for="defaultCheck5">
+                                    5
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="6" id="defaultCheck6"
+                                       name="numberOfGuests">
+                                <label class="form-check-label" for="defaultCheck6">
+                                    6
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dateTime" class="col-12 col-sm-3 col-form-label">Section</label>
+                        <div class="col-12 col-sm-9">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dateTime" class="col-12 col-sm-3 col-form-label">Date and Time</label>
+                        <div class="col-12 col-sm-3">
+                            <input type="date" class="form-control" id="date" name="date"
+                                   placeholder="Date"/>
+                        </div>
+                        <div class="col-12 col-sm-3">
+                            <input type="time" class="form-control" id="time" name="time"
+                                   placeholder="Time"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-3 col-md-10">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -89,7 +195,7 @@
             </div>
             <div class="col-12 col-sm-3 align-self-center">
                 <a class="btn btn-block btn-warning"
-                   data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+85212345678</strong>" data-placement="bottom" type="button" href="#reserveForm">Reserve Table</a>
+                   type="button" data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>
             </div>
         </div>
     </div>
@@ -105,8 +211,10 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span
                                     class="badge badge-pill badge-secondary">$4.99</span></h2>
-                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza,
-                                topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and
+                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian
+                                pizza,
+                                topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies
+                                and
                                 Buffalo Paneer.</p>
                         </div>
                     </div>
@@ -114,8 +222,10 @@
                         <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
                         <div class="carousel-caption d-none d-md-block">
                             <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six
-                                main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
+                            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
+                                different salads, six enticing appetizers, six
+                                main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for
+                                just $19.99 per
                                 person</p>
                         </div>
                     </div>
@@ -124,8 +234,10 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h2>Alberto Somayya</h2>
                             <h4>Executive Chef</h4>
-                            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely
-                                with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian
+                            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                                experience having worked closely
+                                with whos-who in the culinary world, he specializes in creating mouthwatering
+                                Indo-Italian
                                 fusion experiences. </p>
                         </div>
                     </div>
@@ -171,8 +283,10 @@
                 <img class="d-flex ml-3 order-last img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
                 <div class="media-body">
                     <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six
-                        main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
+                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different
+                        salads, six enticing appetizers, six
+                        main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
+                        $19.99 per
                         person</p>
                 </div>
             </div>
@@ -189,7 +303,8 @@
                 <div class="media-body">
                     <h2>Alberto Somayya</h2>
                     <h4>Executive Chef</h4>
-                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely
+                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                        experience having worked closely
                         with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian
                         fusion experiences. </p>
                 </div>
@@ -207,7 +322,8 @@
                             <label for="numberOfGuests" class="col-12 col-sm-3 col-form-label">Number of Guests</label>
                             <div class="col-2 col-sm-1">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1" name="numberOfGuests">
+                                    <input class="form-check-input" type="radio" value="1" id="defaultCheck1"
+                                           name="numberOfGuests">
                                     <label class="form-check-label" for="defaultCheck1">
                                         1
                                     </label>
@@ -215,7 +331,8 @@
                             </div>
                             <div class="col-2 col-sm-1">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="2" id="defaultCheck2" name="numberOfGuests">
+                                    <input class="form-check-input" type="radio" value="2" id="defaultCheck2"
+                                           name="numberOfGuests">
                                     <label class="form-check-label" for="defaultCheck2">
                                         2
                                     </label>
@@ -223,7 +340,8 @@
                             </div>
                             <div class="col-2 col-sm-1">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="3" id="defaultCheck3" name="numberOfGuests">
+                                    <input class="form-check-input" type="radio" value="3" id="defaultCheck3"
+                                           name="numberOfGuests">
                                     <label class="form-check-label" for="defaultCheck3">
                                         3
                                     </label>
@@ -231,7 +349,8 @@
                             </div>
                             <div class="col-2 col-sm-1">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="4" id="defaultCheck4" name="numberOfGuests">
+                                    <input class="form-check-input" type="radio" value="4" id="defaultCheck4"
+                                           name="numberOfGuests">
                                     <label class="form-check-label" for="defaultCheck4">
                                         4
                                     </label>
@@ -239,7 +358,8 @@
                             </div>
                             <div class="col-2 col-sm-1">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="5" id="defaultCheck5" name="numberOfGuests">
+                                    <input class="form-check-input" type="radio" value="5" id="defaultCheck5"
+                                           name="numberOfGuests">
                                     <label class="form-check-label" for="defaultCheck5">
                                         5
                                     </label>
@@ -247,7 +367,8 @@
                             </div>
                             <div class="col-2 col-sm-1">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="6" id="defaultCheck6" name="numberOfGuests">
+                                    <input class="form-check-input" type="radio" value="6" id="defaultCheck6"
+                                           name="numberOfGuests">
                                     <label class="form-check-label" for="defaultCheck6">
                                         6
                                     </label>
@@ -328,7 +449,7 @@
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
