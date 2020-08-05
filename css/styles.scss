@@ -76,14 +76,14 @@ body{
 }
 
 
-$lt-white: #fff;
+$lt-white: floralwhite;
 .modal {
   .modal-header {
     background-color: $background-dark;
     color: $lt-white;
 
     .close {
-      color: $lt-gray;
+      color: $lt-white;
     }
   }
   .modal-content {
