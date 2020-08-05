@@ -74,3 +74,19 @@ body{
   bottom: 0px;
   z-index: 1;
 }
+
+
+$lt-white: #fff;
+.modal {
+  .modal-header {
+    background-color: $background-dark;
+    color: $lt-white;
+
+    .close {
+      color: $lt-gray;
+    }
+  }
+  .modal-content {
+    background-color: $background-pale;
+  }
+}
